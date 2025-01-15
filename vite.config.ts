@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
   console.log(` --------------------- `)
 
   return {
-    base: env.VITE_BASE, // 依照不同環境變數設置不同路徑
+    base: env.VITE_BASE, /** 依照不同環境變數設置不同路徑 */
     esbuild: {
       drop: ["console", "debugger"], // 移除程式碼內的console.log
     },

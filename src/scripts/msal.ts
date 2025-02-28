@@ -3,8 +3,9 @@ import { PublicClientApplication } from "@azure/msal-browser";
 /**
  * Azure AD相關操作(二次封裝'@azure/msal-browser')
  * 參考資訊:
- * 
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki
+ * 設定平台:
+ * https://azure.microsoft.com/zh-tw/products/microsoft-entra-ds
  */
 
 /** Azure AD 導轉後帶有(登入資訊)的(前綴/識別錨點) '#code=' */

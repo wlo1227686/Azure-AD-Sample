@@ -126,3 +126,19 @@ export async function getIdToken() {
 export async function clearCache() {
     msalInstance.clearCache()
 }
+
+
+export async function getIdTokenClaims() {
+    try {
+        await handleRedirectPromise()
+        msalInstance.getAllAccounts()
+    } catch (err) {
+        console.log(err)
+    }
+
+    if (msalInstance.getAllAccounts().length != 0) {
+        return msalInstance.getAllAccounts()[0].idTokenClaims;
+    } else {
+        return null
+    }
+}
